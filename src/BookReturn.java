@@ -7,8 +7,8 @@ public class BookReturn {
         this.id = id;
         this.borrowId = borrowId;
         this.returnDate = returnDate;
-        BookBorrow bookBorrow = UtilFunctions.searchBookBorrowById(borrowId, SourceCode.bookBorrows);
-        Book book = UtilFunctions.searchBookById(bookBorrow.getBookId(), SourceCode.bookSource);
+        BookBorrow bookBorrow = UtilFunctions.searchBookBorrowById(borrowId);
+        Book book = UtilFunctions.searchBookById(bookBorrow.getBookId());
         book.setStock(book.getStock() + 1);
     }
 

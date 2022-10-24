@@ -1,4 +1,4 @@
-public class SourceCode {
+public class Database {
     public static Book book1 = new Book(1, "To kill a mocking bird", 5, new Author[]{new Author(1, "Harper Lee")}, 978 - 3 - 16 - 148410);
     public static Book book2 = new Book(2, "Moby Dick", 4, new Author[] {new Author(2, "Herman Melville")}, 978 - 3 - 16 - 148411);
     public static Book[] bookSource = {book1, book2};

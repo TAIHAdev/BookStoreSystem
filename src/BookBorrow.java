@@ -1,5 +1,3 @@
-import java.time.LocalDate;
-
 public class BookBorrow {
     private int id;
     private int bookId;
@@ -11,7 +9,7 @@ public class BookBorrow {
         this.bookId = bookId;
         this.customerId = customerId;
         this.borrowDate = borrowDate;
-        Book borrowBook = UtilFunctions.searchBookById(bookId, SourceCode.bookSource);
+        Book borrowBook = UtilFunctions.searchBookById(bookId);
         borrowBook.setStock(borrowBook.getStock() - 1);
         // nếu như phải để ý trường hợp không đủ sách thì em sẽ tạo một hàm if nếu như không đủ sách thì để cho thí = null;
     }
