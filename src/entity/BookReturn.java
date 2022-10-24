@@ -1,3 +1,10 @@
+package entity;
+
+import entity.Book;
+import entity.BookBorrow;
+import service.BookBorrowService;
+import service.BookService;
+
 public class BookReturn {
     private int id;
     private int borrowId;
@@ -7,8 +14,8 @@ public class BookReturn {
         this.id = id;
         this.borrowId = borrowId;
         this.returnDate = returnDate;
-        BookBorrow bookBorrow = UtilFunctions.searchBookBorrowById(borrowId);
-        Book book = UtilFunctions.searchBookById(bookBorrow.getBookId());
+        BookBorrow bookBorrow = BookBorrowService.getBookBorrowById(borrowId);
+        Book book = BookService.getBookById(bookBorrow.getBookId());
         book.setStock(book.getStock() + 1);
     }
 

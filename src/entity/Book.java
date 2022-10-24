@@ -1,3 +1,7 @@
+package entity;
+
+import entity.Author;
+
 public class Book {
     private int id;
     private String name;

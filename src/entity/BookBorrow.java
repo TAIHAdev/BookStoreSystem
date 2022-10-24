@@ -1,3 +1,7 @@
+package entity;
+
+import entity.Book;
+
 public class BookBorrow {
     private int id;
     private int bookId;
@@ -9,7 +13,7 @@ public class BookBorrow {
         this.bookId = bookId;
         this.customerId = customerId;
         this.borrowDate = borrowDate;
-        Book borrowBook = UtilFunctions.searchBookById(bookId);
+        Book borrowBook = BookService.getBookById(bookId);
         borrowBook.setStock(borrowBook.getStock() - 1);
         // nếu như phải để ý trường hợp không đủ sách thì em sẽ tạo một hàm if nếu như không đủ sách thì để cho thí = null;
     }
